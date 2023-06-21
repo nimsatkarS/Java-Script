@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    const bikes = ['splender', 'ninja', 'ktm', 'duke'];
+
+
+    //bikes.push('mongodb');
+    //bikes.unshift('Audi');
+
+    /*push and shift*/
+    //bikes.pop(); //Remove the last element in array
+    //bikes.shift(); //Remove the First element in array
+
+    //console.log(bikes['3']); //Find the element you inter the number 
+    //console.log(bikes.length); //TO Find the length of the array
+    //console.log(bikes.pop()); 
+    console.log(bikes.shift());
+
+    /*********************************LOOP IN ARRAY************************************************/
+    for (let i = 0; i < 4; i++) {
+        console.log('hii');
+    }
+
+    const student = [
+        {
+            name: 'Student 1',
+            marks: '40',
+        },
+        {
+            name: 'Student 2',
+            marks: '60',
+        },
+        {
+            name: 'Student 3',
+            marks: '20',
+        },
+        {
+            name: 'Student 4',
+            marks: '30',
+        },
+    ];
+
+  for(let i=0; i<student.length; i++){
+         student[i].marks = student[i].marks -5;
+    }
+ 
+    console.log(student); 
+
+    
+
+//******************************FILTER FUNCTION**************************************
+ const employe = [
+        {
+            name: 'Ravi',
+            salary: '60',
+        },
+        {
+            name: 'Anand',
+            salary: '20',
+        },
+        {
+            name: 'Rohit',
+            salary: '40',
+        },
+        {
+            name: 'Roshan',
+            salary: '10',
+        },
+    ];
+
+  const paid = employe.filter((employ)=>{
+    if(employ.salary > 20){
+
+return false;
+    }
+    else{
+        return true; 
+    }
+    });
+    console.log(employe);
+    console.log(paid); 
+
+    //*********************************MAP FUNCTION***************************************
+
+    
+    const fruits = [
+    {
+        fname: 'banana',
+        fprice: '40',
+    },
+    {
+        fname: 'mango',
+        fprice: '80',
+    }
+    ];
+
+    const yumfruits = fruits.map((fruits)=> {
+return {
+    fruitsname: fruits.fname +' ' + fruits.fprice
+};
+    });
+    console.log(yumfruits)
+
+    //********************************REDUCE********************************
+
+    const movies = [
+    {
+        Mname: 'Matrix',
+        budget: '3',
+    },
+    {
+        Mname: 'Marshel',
+        budget: '3',
+    },
+    {
+        Mname: 'THeari',
+        budget: '4',
+    },
+    {
+        Mname: 'MOneygame',
+        budget: '5',
+    },
+    ];
+
+  const total = movies.reduce((acc, movie) => {
+acc = acc + movie.budget;
+return acc;
+    },0);
+    console.log(total);
+
+   //********************************INDEXOF********************************
+  const admin =[2,5,6];
+
+  const user = {
+    name:'xyz',
+    id:'2'
+  }
+
+  const isAdmin =admin.indexOf(user.id) > -1;
+  console.log(isAdmin);
+
+
+</script>
+
+<body>
+    <h1>Array in java script</h1>
+
+
+    <button id="btn" type="button">Submit</button>
+
+</body>
+
+</html>
